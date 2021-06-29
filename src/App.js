@@ -1,7 +1,11 @@
+import CartItem from './CartItem';
+
 function App() {
   return (
     <div>
-      <h1>Cart</h1>
+      <br />
+      <br />
+      <CartItem />
     </div>
   );
 }
