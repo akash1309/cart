@@ -1,17 +1,7 @@
 import React from 'react';
 
 class CartItem extends React.Component{
-    constructor() {
-        super();
-        this.state = {
-            price : 1000,
-            title : 'Mobile Phone',
-            quantity : 1,
-            url : ''
-        }
-        
-        //this.increaseQuantity = this.increaseQuantity.bind(this);
-    }
+    
 
     increaseQuantity = () => {
         console.log('this',this.state);
@@ -19,15 +9,17 @@ class CartItem extends React.Component{
         
     }
     render(){
+        //const {price, title, quantity} = this.state;
+        const {price, title, quantity} = this.props.product;
         return (
             <div className="cart-item">
                 <div className="left-block">
                     <img style={styles.images} />
                 </div>
                 <div className="right-block">
-                    <div style={ {fontSize : 25}}>{this.state.title}</div>
-                    <div style={ {color : '#777'}}>Rs {this.state.price}</div>
-                    <div style={ {color : '#777'}}>Qty: {this.state.quantity}</div>
+                    <div style={ {fontSize : 25}}>{title}</div>
+                    <div style={ {color : '#777'}}>Rs {price}</div>
+                    <div style={ {color : '#777'}}>Qty: {quantity}</div>
                     <div>
                         { /**  Buttons  **/}
                         <img 
