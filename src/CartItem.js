@@ -5,7 +5,7 @@ class CartItem extends React.Component{
         super();
         this.state = {
             price : 1000,
-            title : 'Phone',
+            title : 'Mobile Phone',
             quantity : 1,
             url : ''
         }
